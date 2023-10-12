@@ -1,0 +1,32 @@
+$radius: 5px;
+
+.cards{
+    border: 3px solid #F6F7F8;
+    border-radius: $radius;
+    margin-bottom: 35px;
+    box-sizing: border-box; 
+
+    @media (max-width: 768px) {
+        /* Definimos el ancho en dispositivos con un ancho máximo de 768px */
+        width: 100%; 
+    }
+}
+
+.img {
+    border-radius: $radius;
+}
+
+.nameCharacter {
+    color: #223263;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+}
+
+.datesCharacter {
+    color: #9098B1;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
