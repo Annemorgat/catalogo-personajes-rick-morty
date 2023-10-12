@@ -4,8 +4,21 @@ import "bootstrap/dist/js/bootstrap";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Pagination from "./components/Pagination/Pagination";
+import Profile from './components/Cards/Profile';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
-function App() {
+function App () {
+  return(
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/:id" element={<Profile />}></Route>
+      </Routes>
+    </Router>
+  )
+}
+
+const Home = () => {
   let [pageNumber, setPageNumber] = useState(1);
   let [fetchedData, updateFetchedData] = useState([]);
   let {info, results} = fetchedData;
@@ -27,7 +40,7 @@ function App() {
 
       <div className="container text-center my-4">
         <div className="row justify-content-center align-items-center">
-           <Cards results={results}/>
+           <Cards page="/" results={results}/>
         </div>
       </div>
       

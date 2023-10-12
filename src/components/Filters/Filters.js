@@ -1,12 +1,13 @@
 import React from 'react'
+import {NavLink, Link} from "react-router-dom"
 
 const Filters = () => {
   return (
     <div className="text-center poppins">
-      <a className= "mx-5" href="#">All</a>
-      <a className= "mx-5">Alive</a>
-      <a className= "mx-5">Dead</a>
-      <a className= "mx-5">Unknown</a>
+      <Link className='mx-4'>All</Link>
+      <Link className='mx-4'>Alive</Link>
+      <Link className='mx-4'>Dead</Link>
+      <Link className='mx-4'>Unknown</Link>
     </div>
   )
 }
